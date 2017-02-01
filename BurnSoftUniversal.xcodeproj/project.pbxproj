@@ -1,0 +1,381 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		A5C1A1811E422E6800B5ABF6 /* BurnSoftUniversalAggregate */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = A5C1A1821E422E6800B5ABF6 /* Build configuration list for PBXAggregateTarget "BurnSoftUniversalAggregate" */;
+			buildPhases = (
+				A5C1A18F1E422FAE00B5ABF6 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = BurnSoftUniversalAggregate;
+			productName = BurnSoftUniversalAggregate;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		A5C1A1741E422D9900B5ABF6 /* BurnSoftUniversal.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C1A1731E422D9900B5ABF6 /* BurnSoftUniversal.m */; };
+		A5C1A1751E422D9900B5ABF6 /* BurnSoftUniversal.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5C1A1721E422D9900B5ABF6 /* BurnSoftUniversal.h */; };
+		A5C1A17D1E422DC300B5ABF6 /* BurnSoftGeneral.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C1A17C1E422DC300B5ABF6 /* BurnSoftGeneral.m */; };
+		A5C1A1801E422DCF00B5ABF6 /* BurnSoftMath.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C1A17F1E422DCF00B5ABF6 /* BurnSoftMath.m */; };
+		A5C1A1861E422F1400B5ABF6 /* BurnSoftMath.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5C1A17E1E422DCF00B5ABF6 /* BurnSoftMath.h */; };
+		A5C1A1871E422F1400B5ABF6 /* BurnSoftGeneral.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5C1A17B1E422DC300B5ABF6 /* BurnSoftGeneral.h */; };
+		A5C1A18A1E422F4A00B5ABF6 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C1A1891E422F4A00B5ABF6 /* DBManager.m */; };
+		A5C1A18B1E422F5300B5ABF6 /* DBManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5C1A1881E422F4A00B5ABF6 /* DBManager.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A5C1A16D1E422D9900B5ABF6 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				A5C1A18B1E422F5300B5ABF6 /* DBManager.h in CopyFiles */,
+				A5C1A1861E422F1400B5ABF6 /* BurnSoftMath.h in CopyFiles */,
+				A5C1A1871E422F1400B5ABF6 /* BurnSoftGeneral.h in CopyFiles */,
+				A5C1A1751E422D9900B5ABF6 /* BurnSoftUniversal.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A5C1A16F1E422D9900B5ABF6 /* libBurnSoftUniversal.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBurnSoftUniversal.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5C1A1721E422D9900B5ABF6 /* BurnSoftUniversal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BurnSoftUniversal.h; sourceTree = "<group>"; };
+		A5C1A1731E422D9900B5ABF6 /* BurnSoftUniversal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BurnSoftUniversal.m; sourceTree = "<group>"; };
+		A5C1A17B1E422DC300B5ABF6 /* BurnSoftGeneral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BurnSoftGeneral.h; sourceTree = "<group>"; };
+		A5C1A17C1E422DC300B5ABF6 /* BurnSoftGeneral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BurnSoftGeneral.m; sourceTree = "<group>"; };
+		A5C1A17E1E422DCF00B5ABF6 /* BurnSoftMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BurnSoftMath.h; sourceTree = "<group>"; };
+		A5C1A17F1E422DCF00B5ABF6 /* BurnSoftMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BurnSoftMath.m; sourceTree = "<group>"; };
+		A5C1A1881E422F4A00B5ABF6 /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
+		A5C1A1891E422F4A00B5ABF6 /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
+		A5C1A18D1E422F8100B5ABF6 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A5C1A16C1E422D9900B5ABF6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A5C1A1661E422D9900B5ABF6 = {
+			isa = PBXGroup;
+			children = (
+				A5C1A1711E422D9900B5ABF6 /* BurnSoftUniversal */,
+				A5C1A1701E422D9900B5ABF6 /* Products */,
+				A5C1A18C1E422F8100B5ABF6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A5C1A1701E422D9900B5ABF6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A5C1A16F1E422D9900B5ABF6 /* libBurnSoftUniversal.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A5C1A1711E422D9900B5ABF6 /* BurnSoftUniversal */ = {
+			isa = PBXGroup;
+			children = (
+				A5C1A1881E422F4A00B5ABF6 /* DBManager.h */,
+				A5C1A1891E422F4A00B5ABF6 /* DBManager.m */,
+				A5C1A17E1E422DCF00B5ABF6 /* BurnSoftMath.h */,
+				A5C1A17F1E422DCF00B5ABF6 /* BurnSoftMath.m */,
+				A5C1A17B1E422DC300B5ABF6 /* BurnSoftGeneral.h */,
+				A5C1A17C1E422DC300B5ABF6 /* BurnSoftGeneral.m */,
+				A5C1A1721E422D9900B5ABF6 /* BurnSoftUniversal.h */,
+				A5C1A1731E422D9900B5ABF6 /* BurnSoftUniversal.m */,
+			);
+			path = BurnSoftUniversal;
+			sourceTree = "<group>";
+		};
+		A5C1A18C1E422F8100B5ABF6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A5C1A18D1E422F8100B5ABF6 /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A5C1A16E1E422D9900B5ABF6 /* BurnSoftUniversal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5C1A1781E422D9900B5ABF6 /* Build configuration list for PBXNativeTarget "BurnSoftUniversal" */;
+			buildPhases = (
+				A5C1A16B1E422D9900B5ABF6 /* Sources */,
+				A5C1A16C1E422D9900B5ABF6 /* Frameworks */,
+				A5C1A16D1E422D9900B5ABF6 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BurnSoftUniversal;
+			productName = BurnSoftUniversal;
+			productReference = A5C1A16F1E422D9900B5ABF6 /* libBurnSoftUniversal.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A5C1A1671E422D9900B5ABF6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = burnsoft;
+				TargetAttributes = {
+					A5C1A16E1E422D9900B5ABF6 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = MF94VYSKL4;
+						ProvisioningStyle = Automatic;
+					};
+					A5C1A1811E422E6800B5ABF6 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = MF94VYSKL4;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = A5C1A16A1E422D9900B5ABF6 /* Build configuration list for PBXProject "BurnSoftUniversal" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A5C1A1661E422D9900B5ABF6;
+			productRefGroup = A5C1A1701E422D9900B5ABF6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A5C1A16E1E422D9900B5ABF6 /* BurnSoftUniversal */,
+				A5C1A1811E422E6800B5ABF6 /* BurnSoftUniversalAggregate */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A5C1A18F1E422FAE00B5ABF6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# define output folder environment variable\nUNIVERSAL_OUTPUTFOLDER=${BUILD_DIR}/${CONFIGURATION}-universal\n\n# Step 1. Build Device and Simulator versions\nxcodebuild -target ImageFilters ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphoneos  BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\"\nxcodebuild -target ImageFilters -configuration ${CONFIGURATION} -sdk iphonesimulator -arch i386 BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\"\n\n# make sure the output directory exists\nmkdir -p \"${UNIVERSAL_OUTPUTFOLDER}\"\n\n# Step 2. Create universal binary file using lipo\nlipo -create -output \"${UNIVERSAL_OUTPUTFOLDER}/lib${PROJECT_NAME}.a\" \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/lib${PROJECT_NAME}.a\" \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/lib${PROJECT_NAME}.a\"\n\n# Last touch. copy the header files. Just for convenience\ncp -R \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/include\" \"${UNIVERSAL_OUTPUTFOLDER}/\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A5C1A16B1E422D9900B5ABF6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5C1A1741E422D9900B5ABF6 /* BurnSoftUniversal.m in Sources */,
+				A5C1A17D1E422DC300B5ABF6 /* BurnSoftGeneral.m in Sources */,
+				A5C1A1801E422DCF00B5ABF6 /* BurnSoftMath.m in Sources */,
+				A5C1A18A1E422F4A00B5ABF6 /* DBManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A5C1A1761E422D9900B5ABF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-load_all",
+				);
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A5C1A1771E422D9900B5ABF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-load_all",
+				);
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A5C1A1791E422D9900B5ABF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = MF94VYSKL4;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BurnSoftUniversal",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A5C1A17A1E422D9900B5ABF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = MF94VYSKL4;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BurnSoftUniversal",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		A5C1A1831E422E6800B5ABF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = MF94VYSKL4;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A5C1A1841E422E6800B5ABF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = MF94VYSKL4;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A5C1A16A1E422D9900B5ABF6 /* Build configuration list for PBXProject "BurnSoftUniversal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5C1A1761E422D9900B5ABF6 /* Debug */,
+				A5C1A1771E422D9900B5ABF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5C1A1781E422D9900B5ABF6 /* Build configuration list for PBXNativeTarget "BurnSoftUniversal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5C1A1791E422D9900B5ABF6 /* Debug */,
+				A5C1A17A1E422D9900B5ABF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A5C1A1821E422E6800B5ABF6 /* Build configuration list for PBXAggregateTarget "BurnSoftUniversalAggregate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5C1A1831E422E6800B5ABF6 /* Debug */,
+				A5C1A1841E422E6800B5ABF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A5C1A1671E422D9900B5ABF6 /* Project object */;
+}
