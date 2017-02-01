@@ -280,7 +280,7 @@
 
 #pragma mark Get Database Path
 //NOTE: Pass the Database Name to find the Path of the database
-//USEDBY: GENERAL, copyDbIfNeeded
+//USEDBY:
 -(NSString *) getDatabasePath :(NSString *) DBNAME
 {
     NSArray *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -289,7 +289,7 @@
 }
 #pragma mark Copy DB if Needed
 //NOTE: Pass the name of the database to see if we need to copy the database from the application directory to the documents directory
-//USEDBY: GENERAL & restoreFactoryDB
+//USEDBY:
 -(void) copyDbIfNeeded :(NSString *) DBNAME MessageHandler:(NSString **) msg
 {
     NSString *myDBinAppPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:DBNAME];
@@ -306,30 +306,10 @@
     }
     
 }
-/*
- Older methods, my no longer be used
--(void) copyDbIfNeeded :(NSString *) DBNAME
-{
-    NSString *myDBinAppPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:DBNAME];
-    NSString *myDBinDocsPath = [self getDatabasePath:DBNAME];
-    
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    if (![fileManager fileExistsAtPath:myDBinDocsPath]) {
-        NSError *error;
-        BOOL success;
-        success = [fileManager copyItemAtPath:myDBinAppPath toPath:myDBinDocsPath error:&error];
-        if (!success) {
-            NSLog(@"Error coping database: %@",[error localizedDescription]);
-        } else {
-            NSLog(@"db copy success!");
-        }
-    }
-    
-}
- */
+
 #pragma mark Check Database
 //NOTE: Pass the Database name to see if the database is in the path that we need it to be in
-//USEDBY: GENERAL
+//USEDBY:
 -(void)checkDB :(NSString *) DBNAME MessageHandler:(NSString **) msg
 {
     NSString *dbPathString = [self getDatabasePath:DBNAME];
@@ -340,25 +320,10 @@
         *msg = @"Database found!";
     }
 }
-/*
- Older methos, may no longer be use
--(void)checkDB :(NSString *) DBNAME
-{
-    NSString *dbPathString = [self getDatabasePath:DBNAME];
-    //char *error;
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    if (![fileManager fileExistsAtPath:dbPathString]) {
-        //const char *dbPath = [dbPathString UTF8String];
-        NSLog(@"Database is missing from Path! %@", dbPathString);
-    } else {
-        NSLog(@"Found Database!");
-    }
-}
-*/
-//NEW
+
 #pragma mark Restory Factory Database
 //NOTE: Retore the Factory Database by deleting the database in the user docs and copying it back over.
-//USEDBBY: GENERAL
+//USEDBBY:
 -(void) restoreFactoryDB :(NSString *) DBNAME MessageHandler:(NSString **) msg
 {
     NSString *myDBinDocsPath = [self getDatabasePath:DBNAME];

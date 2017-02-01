@@ -16,5 +16,8 @@
 -(unsigned long) CountCharacters:(NSString *) sValue;
 -(BOOL) isNumeric :(NSString *) sValue;
 -(NSString *)formatDate:(NSDate *)date;
-
+-(NSString *)formatLongConnectedByDateAndTIme:(NSDate *)mydate;
+-(NSString *)formatLongConnectedDateTimeStamp;
+-(BOOL) copyFileFromFilePath:(NSString *) fromPath ToNewPath:(NSString *) toPath ErrorMessage:(NSString **) msg;
+-(BOOL)DeleteFileByPath:(NSString *) sPath ErrorMessage:(NSString **) msg;
 @end

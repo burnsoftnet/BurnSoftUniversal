@@ -81,4 +81,90 @@
     NSString *formattedDate = [dateFormatter stringFromDate:date];
     return formattedDate;
 }
+#pragma mark Format Date and Time Long By Provided DateTime
+// Pass a Date and Time Stampe and have it returned in a connected format
+-(NSString *)formatLongConnectedByDateAndTIme:(NSDate *)mydate
+{
+    NSString *sAns = [NSString new];
+    NSDateFormatter *dateFormatter=[NSDateFormatter new];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd_HH_mm_ss"];
+    //[dateFormatter stringFromDate:[NSDate date]
+    sAns = [NSString stringWithFormat:@"%@",[dateFormatter stringFromDate:mydate]];
+    return sAns;
+}
+#pragma mark Format Date and Time Long By Current DateTime
+// Get the Current Date and Time Stampe and have it returned in a connected format
+-(NSString *)formatLongConnectedDateTimeStamp
+{
+    NSString *sAns = [NSString new];
+    NSDateFormatter *dateFormatter=[NSDateFormatter new];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd_HH_mm_ss"];
+
+    sAns = [NSString stringWithFormat:@"%@",[dateFormatter stringFromDate:[NSDate date]]];
+            
+    return sAns;
+}
+#pragma mark CopyFile
+// Simplify the copy and replace method with overwriteoption
+-(BOOL) copyFileFromFilePath:(NSString *) fromPath ToNewPath:(NSString *) toPath ErrorMessage:(NSString **) msg
+{
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    
+    NSError *error;
+    NSString *deleteError = [NSString new];
+    BOOL success;
+    BOOL bAns = NO;
+    
+    BOOL FileExistsAtDest = [fileManager fileExistsAtPath:toPath];
+    BOOL FileExistsAtSource = [fileManager fileExistsAtPath:fromPath];
+    BOOL DESTDELETESUCCESSFUL = NO;
+    
+    if (FileExistsAtSource && FileExistsAtDest) {
+        DESTDELETESUCCESSFUL = [self DeleteFileByPath:toPath ErrorMessage:&deleteError];
+    } else if (!FileExistsAtDest && FileExistsAtSource) {
+        DESTDELETESUCCESSFUL = YES;
+    } else if (!FileExistsAtSource && !FileExistsAtDest) {
+        DESTDELETESUCCESSFUL = NO;
+        *msg = [NSString stringWithFormat:@"File Does not Exist at Source or Destination!"];
+    }
+    
+    if (DESTDELETESUCCESSFUL)
+    {
+        success = [fileManager copyItemAtPath:fromPath toPath:toPath error:&error];
+        if (!success)
+        {
+            *msg = [NSString stringWithFormat:@"Error coping file: %@",[error localizedDescription]];
+        } else {
+            *msg = [NSString stringWithFormat:@"Copy Successful!"];
+            bAns = YES;
+        }
+    } else {
+        if ([*msg isEqualToString:@""])
+        {
+            *msg = deleteError;
+        }
+    }
+
+    return bAns;
+}
+#pragma mark Delete File byPath
+// Pass the path and file to delete that file
+-(BOOL)DeleteFileByPath:(NSString *) sPath ErrorMessage:(NSString **) msg
+{
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    BOOL success = NO;
+    NSError *error;
+    
+    success = [fileManager removeItemAtPath:sPath error:&error];
+    if (!success)
+    {
+        *msg = [NSString stringWithFormat:@"Error deleting database: %@",[error localizedDescription]];
+    }else {
+        *msg = [NSString stringWithFormat:@"Delete Successful!"];
+    }
+    return success;
+}
+
+
 @end
