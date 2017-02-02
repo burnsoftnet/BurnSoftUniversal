@@ -20,4 +20,7 @@
 -(NSString *)formatLongConnectedDateTimeStamp;
 -(BOOL) copyFileFromFilePath:(NSString *) fromPath ToNewPath:(NSString *) toPath ErrorMessage:(NSString **) msg;
 -(BOOL)DeleteFileByPath:(NSString *) sPath ErrorMessage:(NSString **) msg;
+-(NSArray *) getCertainFilefromPath:(NSString *) sPath ByExtension:(NSString *) myExt;
+-(NSArray *) getCertainFilesFromDocumentsByExtension:(NSString *) myExt;
+-(NSString *) returnFullPathwithFileName:(NSString *) myFile;
 @end

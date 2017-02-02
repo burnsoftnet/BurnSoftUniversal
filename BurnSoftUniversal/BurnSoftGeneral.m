@@ -165,6 +165,36 @@
     }
     return success;
 }
-
-
+#pragma mark Load Files in Path by Extension
+//Load all the files in the target path that have a certain type of extension
+-(NSArray *) getCertainFilefromPath:(NSString *) sPath ByExtension:(NSString *) myExt
+{
+    NSArray *filePathsArray = [NSArray new];
+    NSArray *dirFiles = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:sPath error:nil];
+    NSString *filefilter = [NSString stringWithFormat:@"self ENDSWITH '.%@'",myExt];
+    filePathsArray = [dirFiles filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:filefilter]];
+    
+    return filePathsArray;
+}
+#pragma mark Load Files in Local Directory by Extension
+// Load all the files in the Local docuemtns directory by a certain extention
+-(NSArray *) getCertainFilesFromDocumentsByExtension:(NSString *) myExt
+{
+    NSArray *filePathsArray = [NSArray new];
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSArray *dirFiles = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:documentsDirectory error:nil];
+    NSString *filefilter = [NSString stringWithFormat:@"self ENDSWITH '.%@'",myExt];
+    filePathsArray = [dirFiles filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:filefilter]];
+    
+    return filePathsArray;
+}
+#pragma mark Return Full Path of App Documents with file name
+//Return Full Path of App Documents with file name attached
+-(NSString *) returnFullPathwithFileName:(NSString *) myFile
+{
+    NSArray *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *docPath = [path objectAtIndex:0];
+    return [docPath stringByAppendingPathComponent:myFile];
+}
 @end
