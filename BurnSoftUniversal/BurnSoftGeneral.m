@@ -197,4 +197,43 @@
     NSString *docPath = [path objectAtIndex:0];
     return [docPath stringByAppendingPathComponent:myFile];
 }
+#pragma mark CopyFile 2
+// Simplify the copy and replace method with overwriteoption
+-(BOOL) copyFileFrom:(NSString *) sFrom To:(NSString *) sTo ErrorMessage:(NSString **) errorMessage
+{
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSString *deleteError = [NSString new];
+    NSError *error;
+    BOOL bAns = NO;
+    BOOL FileExistsInTo = [fileManager fileExistsAtPath:sTo];
+    BOOL FileExistsInFrom = [fileManager fileExistsAtPath:sFrom];
+    BOOL FileClearedInDestination = NO;
+    
+    if (FileExistsInTo && FileExistsInFrom)
+    {
+        FileClearedInDestination = [self DeleteFileByPath:sTo ErrorMessage:&deleteError];
+    } else if (!FileExistsInFrom && FileExistsInTo) {
+        FileClearedInDestination = YES;
+    } else if (!FileExistsInFrom && !FileExistsInTo) {
+        FileClearedInDestination = NO;
+        *errorMessage = @"File doesn't exist in source or destination!";
+    }
+    
+    if (FileClearedInDestination)
+    {
+        if (![fileManager copyItemAtPath:sFrom toPath:sTo error:&error])
+        {
+            *errorMessage = [NSString stringWithFormat:@"Error copying file: %@",[error localizedDescription]];
+        } else {
+            *errorMessage = [NSString stringWithFormat:@"Backup Successful!"];
+            bAns = YES;
+        }
+    } else {
+        if ([*errorMessage isEqualToString:@""]) {
+            *errorMessage = [NSString stringWithFormat:@"Delete Error: %@",deleteError];
+        }
+    }
+    
+    return bAns;
+}
 @end

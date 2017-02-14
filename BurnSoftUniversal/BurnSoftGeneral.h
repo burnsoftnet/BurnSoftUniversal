@@ -23,4 +23,5 @@
 -(NSArray *) getCertainFilefromPath:(NSString *) sPath ByExtension:(NSString *) myExt;
 -(NSArray *) getCertainFilesFromDocumentsByExtension:(NSString *) myExt;
 -(NSString *) returnFullPathwithFileName:(NSString *) myFile;
+-(BOOL) copyFileFrom:(NSString *) sFrom To:(NSString *) sTo ErrorMessage:(NSString **) errorMessage;
 @end
