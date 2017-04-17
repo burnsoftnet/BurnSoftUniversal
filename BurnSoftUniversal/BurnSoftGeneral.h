@@ -65,4 +65,7 @@
 #pragma mark Convert Bool to String
 //Convert a boolean value to string Yes or No
 +(NSString *) convertBOOLtoString:(BOOL) bValue;
+#pragma mark Get File Exteension From File Path
+// Get the extension of the file from the full path
++(NSString *) getFileExtensionbyPath:(NSString *) filePath;
 @end

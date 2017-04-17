@@ -268,4 +268,14 @@
     return sAns;
 }
 
+#pragma mark Get File Exteension From File Path
+// Get the extension of the file from the full path
++(NSString *) getFileExtensionbyPath:(NSString *) filePath
+{
+    NSArray *pathArray = [filePath componentsSeparatedByString:@"."];
+    NSString *fileExtension = [pathArray lastObject];
+    return fileExtension;
+}
+
+
 @end
