@@ -20,7 +20,8 @@
 @end
 
 @implementation DBManager
-
+#pragma mark Init Database with File name
+//Initialize the database with the file name
 -(instancetype)initWithDatabaseFileName:(NSString *)dbFilename {
     self = [super init];
     if (self ) {
@@ -40,6 +41,9 @@
     return self;
 }
 
+#pragma mark  PRIVATE - Copy DB to Docs Directory
+//Copy the database from the application path to the users documents path
+//Since when the application is updated, the database is replaced and to prevent that we copy the database to the user docs path to retain the data.
 -(void)copyDatabaseIntoDocumentsDirectory {
     //Check if the database file exists in the docuents directory.
     NSString *destinationPath = [self.documentsDirectory stringByAppendingPathComponent:self.databaseFilename];
@@ -54,6 +58,9 @@
         }
     }
 }
+
+#pragma mark PRIVATE - Run SQL statement
+//pass a sqlstatement to be executed, select with resulte set into the Array.
 -(void)runQuery:(const char *)query isQueryExecutable:(BOOL)queryExecutable{
     // Create a sqlite object.
     sqlite3 *sqlite3Database;
@@ -162,6 +169,8 @@
     // Close the database.
     sqlite3_close(sqlite3Database);
 }
+#pragma mark Load Data from DB into Array
+// Pass a STL statement to have the data loaded into an Array
 -(NSArray *)loadDataFromDB:(NSString *)query {
     //run the query and indicate that is not executable
     //the query string is converted to a char * object
@@ -170,10 +179,13 @@
     //return the loaded results
     return (NSArray *)self.arrResults;
 }
+
+#pragma mark Execute SQL statement
+//pass a sqlstatement to be executed, usually INSERT,UPDATE, DELETE, etc.
 -(void)executeQuery:(NSString *)query {
-    //run the query and indicated that it is executable
     [self runQuery:[query UTF8String] isQueryExecutable:YES];
 }
+
 #pragma mark Error Handling
 //NOTE: Translate Errors from SQLITE integer to English
 //USEDBY: GENERAL

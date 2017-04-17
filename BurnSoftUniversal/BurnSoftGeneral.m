@@ -13,7 +13,7 @@
 #pragma mark Fluff Content String
 //This will Fluff/Prep the string for inserting value into a database
 //It will mostly take out things that can conflict, such as the single qoute
--(NSString *) FCString: (NSString *) sValue {
++(NSString *) FCString: (NSString *) sValue {
     NSString *sAns = [NSString new];
     sAns = [sValue stringByReplacingOccurrencesOfString:@"'" withString:@"''"];
     sAns = [sAns stringByReplacingOccurrencesOfString:@"`" withString:@"''"];
@@ -23,7 +23,7 @@
 
 #pragma mark Fluff Content String to Long
 //This will convert a string into a long value
--(unsigned long) FCLong:(NSString *) sValue;{
++(unsigned long) FCLong:(NSString *) sValue;{
     NSUInteger uAns = [sValue length];
     unsigned long iAns = uAns;
     return iAns;
@@ -37,7 +37,7 @@
 //mySeperator = @","
 //myIndex = 2
 //Result = @"how"
--(NSString *)getValueFromLongString:(NSString *)sValue :(NSString *)mySeparater :(NSInteger) myIndex
++(NSString *)getValueFromLongString:(NSString *)sValue :(NSString *)mySeparater :(NSInteger) myIndex
 {
     NSString *sAns = [NSString new];
     NSArray *myArray = [sValue componentsSeparatedByString:mySeparater];
@@ -47,7 +47,7 @@
 
 #pragma mark Count Characters
 //This will return the number of characters in a string
--(unsigned long) CountCharacters:(NSString *)sValue{
++(unsigned long) CountCharacters:(NSString *)sValue{
     NSUInteger uAns = [sValue length];
     unsigned long iAns = uAns;
     return iAns;
@@ -55,7 +55,7 @@
 
 #pragma mark Is Numeric
 //This will return true if the value is a number, false if it isn't
--(BOOL) isNumeric :(NSString *) sValue
++(BOOL) isNumeric :(NSString *) sValue
 {
     static BOOL bAns = NO;
     NSScanner *scanner = [NSScanner scannerWithString:sValue];
@@ -73,7 +73,7 @@
 
 #pragma mark Format Date
 //Format date to mm/dd/yyyy
--(NSString *)formatDate:(NSDate *)date
++(NSString *)formatDate:(NSDate *)date
 {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateStyle:NSDateFormatterShortStyle];
@@ -83,7 +83,7 @@
 }
 #pragma mark Format Date and Time Long By Provided DateTime
 // Pass a Date and Time Stampe and have it returned in a connected format
--(NSString *)formatLongConnectedByDateAndTIme:(NSDate *)mydate
++(NSString *)formatLongConnectedByDateAndTIme:(NSDate *)mydate
 {
     NSString *sAns = [NSString new];
     NSDateFormatter *dateFormatter=[NSDateFormatter new];
@@ -94,7 +94,7 @@
 }
 #pragma mark Format Date and Time Long By Current DateTime
 // Get the Current Date and Time Stampe and have it returned in a connected format
--(NSString *)formatLongConnectedDateTimeStamp
++(NSString *)formatLongConnectedDateTimeStamp
 {
     NSString *sAns = [NSString new];
     NSDateFormatter *dateFormatter=[NSDateFormatter new];
@@ -106,7 +106,7 @@
 }
 #pragma mark CopyFile
 // Simplify the copy and replace method with overwriteoption
--(BOOL) copyFileFromFilePath:(NSString *) fromPath ToNewPath:(NSString *) toPath ErrorMessage:(NSString **) msg
++(BOOL) copyFileFromFilePath:(NSString *) fromPath ToNewPath:(NSString *) toPath ErrorMessage:(NSString **) msg
 {
     
     NSFileManager *fileManager = [NSFileManager defaultManager];
@@ -150,7 +150,7 @@
 }
 #pragma mark Delete File byPath
 // Pass the path and file to delete that file
--(BOOL)DeleteFileByPath:(NSString *) sPath ErrorMessage:(NSString **) msg
++(BOOL)DeleteFileByPath:(NSString *) sPath ErrorMessage:(NSString **) msg
 {
     NSFileManager *fileManager = [NSFileManager defaultManager];
     BOOL success = NO;
@@ -167,7 +167,7 @@
 }
 #pragma mark Load Files in Path by Extension
 //Load all the files in the target path that have a certain type of extension
--(NSArray *) getCertainFilefromPath:(NSString *) sPath ByExtension:(NSString *) myExt
++(NSArray *) getCertainFilefromPath:(NSString *) sPath ByExtension:(NSString *) myExt
 {
     NSArray *filePathsArray = [NSArray new];
     NSArray *dirFiles = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:sPath error:nil];
@@ -178,7 +178,7 @@
 }
 #pragma mark Load Files in Local Directory by Extension
 // Load all the files in the Local docuemtns directory by a certain extention
--(NSArray *) getCertainFilesFromDocumentsByExtension:(NSString *) myExt
++(NSArray *) getCertainFilesFromDocumentsByExtension:(NSString *) myExt
 {
     NSArray *filePathsArray = [NSArray new];
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -191,7 +191,7 @@
 }
 #pragma mark Return Full Path of App Documents with file name
 //Return Full Path of App Documents with file name attached
--(NSString *) returnFullPathwithFileName:(NSString *) myFile
++(NSString *) returnFullPathwithFileName:(NSString *) myFile
 {
     NSArray *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *docPath = [path objectAtIndex:0];
@@ -199,7 +199,7 @@
 }
 #pragma mark CopyFile 2
 // Simplify the copy and replace method with overwriteoption
--(BOOL) copyFileFrom:(NSString *) sFrom To:(NSString *) sTo ErrorMessage:(NSString **) errorMessage
++(BOOL) copyFileFrom:(NSString *) sFrom To:(NSString *) sTo ErrorMessage:(NSString **) errorMessage
 {
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSString *deleteError = [NSString new];
@@ -236,4 +236,36 @@
     
     return bAns;
 }
+#pragma mark Create a Directory
+//Create a directory if it doesn't already exist
++(BOOL)createDirectoryIfNotExists:(NSString *) sPath ErrorMessage:(NSString **) errMsg
+{
+    BOOL bAns = NO;
+    BOOL isDir;
+    NSError *error;
+    NSFileManager *fileManager= [NSFileManager defaultManager];
+    if(![fileManager fileExistsAtPath:sPath isDirectory:&isDir]) {
+        if(![fileManager createDirectoryAtPath:sPath withIntermediateDirectories:YES attributes:nil error:&error]) {
+            *errMsg = [NSString stringWithFormat:@"%@",[error localizedDescription]];
+        } else {
+            bAns = YES;
+        }
+    } else {
+        bAns = YES;
+    }
+    return bAns;
+}
+#pragma mark Convert Bool to String
+//Convert a boolean value to string Yes or No
++(NSString *) convertBOOLtoString:(BOOL) bValue
+{
+    NSString *sAns = [NSString new];
+    if (bValue) {
+        sAns = @"Yes";
+    } else {
+        sAns = @"No";
+    }
+    return sAns;
+}
+
 @end
