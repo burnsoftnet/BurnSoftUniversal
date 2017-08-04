@@ -22,13 +22,13 @@
 
 /* Begin PBXBuildFile section */
 		A5C1A1741E422D9900B5ABF6 /* BurnSoftUniversal.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C1A1731E422D9900B5ABF6 /* BurnSoftUniversal.m */; };
-		A5C1A1751E422D9900B5ABF6 /* BurnSoftUniversal.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5C1A1721E422D9900B5ABF6 /* BurnSoftUniversal.h */; };
+		A5C1A1751E422D9900B5ABF6 /* BurnSoftUniversal.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5C1A1721E422D9900B5ABF6 /* BurnSoftUniversal.h */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		A5C1A17D1E422DC300B5ABF6 /* BurnSoftGeneral.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C1A17C1E422DC300B5ABF6 /* BurnSoftGeneral.m */; };
 		A5C1A1801E422DCF00B5ABF6 /* BurnSoftMath.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C1A17F1E422DCF00B5ABF6 /* BurnSoftMath.m */; };
-		A5C1A1861E422F1400B5ABF6 /* BurnSoftMath.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5C1A17E1E422DCF00B5ABF6 /* BurnSoftMath.h */; };
-		A5C1A1871E422F1400B5ABF6 /* BurnSoftGeneral.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5C1A17B1E422DC300B5ABF6 /* BurnSoftGeneral.h */; };
+		A5C1A1861E422F1400B5ABF6 /* BurnSoftMath.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5C1A17E1E422DCF00B5ABF6 /* BurnSoftMath.h */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A5C1A1871E422F1400B5ABF6 /* BurnSoftGeneral.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5C1A17B1E422DC300B5ABF6 /* BurnSoftGeneral.h */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		A5C1A18A1E422F4A00B5ABF6 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C1A1891E422F4A00B5ABF6 /* DBManager.m */; };
-		A5C1A18B1E422F5300B5ABF6 /* DBManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5C1A1881E422F4A00B5ABF6 /* DBManager.h */; };
+		A5C1A18B1E422F5300B5ABF6 /* DBManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5C1A1881E422F4A00B5ABF6 /* DBManager.h */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
