@@ -66,4 +66,11 @@
 //Pass two string values to be added as doubles and return the result as a string
 +(NSString *) AddTwoItemsAsDoubleString :(NSString *) itemOne :(NSString *) itemTwo;
 
+#pragma mark Get the Average
+//Get the Average of a set of numbers in an array
+- (NSNumber *)averageOf:(NSArray *)data;
+
+#pragma mark Get Standard Devisation
+//Get the standard deviation of an array of numbers
+-(NSNumber *) getStandardDeviation:(NSArray*) data;
 @end

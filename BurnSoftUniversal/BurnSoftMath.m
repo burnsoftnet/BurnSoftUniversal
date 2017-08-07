@@ -105,4 +105,37 @@
     return [NSString stringWithFormat:@"%f",[itemOne doubleValue] + [itemTwo doubleValue]];
 }
 
+#pragma mark Get the Average
+//Get the Average of a set of numbers in an array
+- (NSNumber *)averageOf:(NSArray *)data
+{
+    double Total = 0.0;
+    
+    for(NSNumber *number in data)
+    {
+        Total += [number doubleValue];
+    }
+    
+    return [NSNumber numberWithDouble:(Total / [data count])];
+}
+
+#pragma mark Get Standard Devisation
+//Get the standard deviation of an array of numbers
+-(NSNumber *) getStandardDeviation:(NSArray*) data
+{
+    if(![data count]) return nil;
+    NSNumber *nAns = 0;
+    double mean = [[self averageOf:data] doubleValue];
+    double sumOfPowDiff = 0;
+    double listAvg = 0;
+    
+    for(NSNumber *number in data)
+    {
+        sumOfPowDiff += pow([number doubleValue] - mean,2);
+    }
+    listAvg = sumOfPowDiff / [data count];
+    
+    nAns = [NSNumber numberWithDouble:sqrt(listAvg)];
+    return nAns;
+}
 @end
