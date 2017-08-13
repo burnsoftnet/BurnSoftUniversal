@@ -54,6 +54,8 @@
 // Get the Current Date and Time Stampe and have it returned in a connected format
 +(NSString *)formatLongConnectedDateTimeStamp;
 
+//TO DELETE - This was Moved to to BurnSoftFileSystem Class
+
 #pragma mark CopyFile
 // Simplify the copy and replace method with overwriteoption
 +(BOOL) copyFileFromFilePath:(NSString *) fromPath ToNewPath:(NSString *) toPath ErrorMessage:(NSString **) msg;

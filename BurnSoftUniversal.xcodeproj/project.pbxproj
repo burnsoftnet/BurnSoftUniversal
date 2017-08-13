@@ -21,6 +21,10 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		A5A3263C1F3FE08A0021EC6D /* BurnSoftFileSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A3263B1F3FE08A0021EC6D /* BurnSoftFileSystem.m */; };
+		A5A3263F1F3FE14D0021EC6D /* BurnSoftFormFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A3263E1F3FE14D0021EC6D /* BurnSoftFormFunctions.m */; };
+		A5A326401F3FE1C10021EC6D /* BurnSoftFileSystem.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5A3263A1F3FE08A0021EC6D /* BurnSoftFileSystem.h */; };
+		A5A326411F3FE1C10021EC6D /* BurnSoftFormFunctions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5A3263D1F3FE14D0021EC6D /* BurnSoftFormFunctions.h */; };
 		A5C1A1741E422D9900B5ABF6 /* BurnSoftUniversal.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C1A1731E422D9900B5ABF6 /* BurnSoftUniversal.m */; };
 		A5C1A1751E422D9900B5ABF6 /* BurnSoftUniversal.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5C1A1721E422D9900B5ABF6 /* BurnSoftUniversal.h */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		A5C1A17D1E422DC300B5ABF6 /* BurnSoftGeneral.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C1A17C1E422DC300B5ABF6 /* BurnSoftGeneral.m */; };
@@ -38,6 +42,8 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				A5A326401F3FE1C10021EC6D /* BurnSoftFileSystem.h in CopyFiles */,
+				A5A326411F3FE1C10021EC6D /* BurnSoftFormFunctions.h in CopyFiles */,
 				A5C1A18B1E422F5300B5ABF6 /* DBManager.h in CopyFiles */,
 				A5C1A1861E422F1400B5ABF6 /* BurnSoftMath.h in CopyFiles */,
 				A5C1A1871E422F1400B5ABF6 /* BurnSoftGeneral.h in CopyFiles */,
@@ -48,6 +54,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A5A3263A1F3FE08A0021EC6D /* BurnSoftFileSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BurnSoftFileSystem.h; sourceTree = "<group>"; };
+		A5A3263B1F3FE08A0021EC6D /* BurnSoftFileSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BurnSoftFileSystem.m; sourceTree = "<group>"; };
+		A5A3263D1F3FE14D0021EC6D /* BurnSoftFormFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BurnSoftFormFunctions.h; sourceTree = "<group>"; };
+		A5A3263E1F3FE14D0021EC6D /* BurnSoftFormFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BurnSoftFormFunctions.m; sourceTree = "<group>"; };
 		A5C1A16F1E422D9900B5ABF6 /* libBurnSoftUniversal.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBurnSoftUniversal.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5C1A1721E422D9900B5ABF6 /* BurnSoftUniversal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BurnSoftUniversal.h; sourceTree = "<group>"; };
 		A5C1A1731E422D9900B5ABF6 /* BurnSoftUniversal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BurnSoftUniversal.m; sourceTree = "<group>"; };
@@ -99,6 +109,10 @@
 				A5C1A17C1E422DC300B5ABF6 /* BurnSoftGeneral.m */,
 				A5C1A1721E422D9900B5ABF6 /* BurnSoftUniversal.h */,
 				A5C1A1731E422D9900B5ABF6 /* BurnSoftUniversal.m */,
+				A5A3263A1F3FE08A0021EC6D /* BurnSoftFileSystem.h */,
+				A5A3263B1F3FE08A0021EC6D /* BurnSoftFileSystem.m */,
+				A5A3263D1F3FE14D0021EC6D /* BurnSoftFormFunctions.h */,
+				A5A3263E1F3FE14D0021EC6D /* BurnSoftFormFunctions.m */,
 			);
 			path = BurnSoftUniversal;
 			sourceTree = "<group>";
@@ -191,9 +205,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5A3263F1F3FE14D0021EC6D /* BurnSoftFormFunctions.m in Sources */,
 				A5C1A1741E422D9900B5ABF6 /* BurnSoftUniversal.m in Sources */,
 				A5C1A17D1E422DC300B5ABF6 /* BurnSoftGeneral.m in Sources */,
 				A5C1A1801E422DCF00B5ABF6 /* BurnSoftMath.m in Sources */,
+				A5A3263C1F3FE08A0021EC6D /* BurnSoftFileSystem.m in Sources */,
 				A5C1A18A1E422F4A00B5ABF6 /* DBManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,6 +324,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = MF94VYSKL4;
+				DYLIB_COMPATIBILITY_VERSION = 1.1.0;
+				DYLIB_CURRENT_VERSION = 1.1.0;
 				ENABLE_BITCODE = NO;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -326,6 +344,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = MF94VYSKL4;
+				DYLIB_COMPATIBILITY_VERSION = 1.1.0;
+				DYLIB_CURRENT_VERSION = 1.1.0;
 				ENABLE_BITCODE = NO;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -345,7 +365,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = MF94VYSKL4;
+				DYLIB_COMPATIBILITY_VERSION = 1.1.0;
+				DYLIB_CURRENT_VERSION = 1.1.0;
 				ENABLE_BITCODE = NO;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -354,7 +377,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = MF94VYSKL4;
+				DYLIB_COMPATIBILITY_VERSION = 1.1.0;
+				DYLIB_CURRENT_VERSION = 1.1.0;
 				ENABLE_BITCODE = NO;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
