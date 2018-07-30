@@ -54,4 +54,7 @@
 // Get the Current Date and Time Stampe and have it returned in a connected format
 +(NSString *)formatLongConnectedDateTimeStamp;
 
+#pragma mark Convert String to NSNumber
+//Convert a string to NSNumber
++(NSNumber *) convertToNSNumberByString:(NSString *) sValue;
 @end
