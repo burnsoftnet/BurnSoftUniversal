@@ -82,7 +82,7 @@
     return filePathsArray;
 }
 #pragma mark Load Files in Local Directory by Extension
-// Load all the files in the Local docuemtns directory by a certain extention
+// Load all the files in the Local documents directory by a certain extension.
 +(NSArray *) getCertainFilesFromDocumentsByExtension:(NSString *) myExt
 {
     NSArray *filePathsArray = [NSArray new];

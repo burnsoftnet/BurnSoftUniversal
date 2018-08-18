@@ -49,7 +49,7 @@
 //mySeperator = @","
 //myIndex = 2
 //Result = @"how"
-+(NSString *)getValueFromLongString:(NSString *)sValue :(NSString *)mySeparater :(NSInteger) myIndex
++(NSString *)getValueFromLongString:(NSString *)sValue Separater:(NSString *)mySeparater AtIndex:(NSInteger) myIndex
 {
     NSString *sAns = [NSString new];
     NSArray *myArray = [sValue componentsSeparatedByString:mySeparater];

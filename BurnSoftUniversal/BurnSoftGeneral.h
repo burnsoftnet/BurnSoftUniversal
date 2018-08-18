@@ -32,7 +32,7 @@
 //mySeperator = @","
 //myIndex = 2
 //Result = @"how"
-+(NSString *)getValueFromLongString:(NSString *)sValue :(NSString *)mySeparater :(NSInteger) myIndex;
++(NSString *)getValueFromLongString:(NSString *)sValue Separater:(NSString *)mySeparater AtIndex:(NSInteger) myIndex;
 
 #pragma mark Count Characters
 //This will return the number of characters in a string
