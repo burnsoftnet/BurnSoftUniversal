@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface BurnSoftDateTime : NSObject
 
++(NSString *) getCurrentDateTime;
+
 @end
 
 NS_ASSUME_NONNULL_END
