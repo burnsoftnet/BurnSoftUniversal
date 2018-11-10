@@ -15,8 +15,9 @@
 @implementation BurnSoftFormFunctions
 
 #pragma mark Textbox View Layouts
-//NOTE: Creates a border around a Textview
-//USEBD: GENERAL
+/*! @brief  Creates a border around a Textview
+    @remark USEBD: GENERAL
+ */
 +(void) setBordersTextView :(UITextView *) myObj
 {
     [[myObj layer] setBorderColor:[[UIColor grayColor] CGColor]];
@@ -25,8 +26,9 @@
 }
 
 #pragma mark Textbox Layout
-//NOTE: Creates a border around a regular text box
-//USEBD: GENERAL
+/*! @brief NOTE: Creates a border around a regular text box
+    @remark USEBD: GENERAL
+ */
 +(void) setBorderTextBox :(UITextField *) myObj
 {
     [[myObj layer] setBorderColor:[[UIColor grayColor] CGColor]];
@@ -35,8 +37,9 @@
 }
 
 #pragma mark Label Borders
-//NOTE: Creates a border around the label
-//USEBD: GENERAL
+/*! @brief  Creates a border around the label
+    @remark USEBD: GENERAL
+ */
 +(void) setBorderLabel :(UILabel *) myObj
 {
     [[myObj layer] setBorderColor:[[UIColor grayColor] CGColor]];
@@ -45,8 +48,9 @@
 }
 
 #pragma mark Common Alert/Message Handling
-//NOTE: Send a Message box from the View controller that you are currently on. It's easier then copying this function all over the place
-//USEBD: GENERAL
+/*! @brief  Send a Message box from the View controller that you are currently on. It's easier then copying this function all over the place
+    @remark USEBD: GENERAL
+ */
 -(void)sendMessage:(NSString *) msg MyTitle:(NSString *) mytitle ViewController:(UIViewController *) MyViewController
 {
     //Send MessageBox Alert message to screen
