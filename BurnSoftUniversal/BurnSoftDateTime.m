@@ -9,7 +9,9 @@
 #import "BurnSoftDateTime.h"
 
 @implementation BurnSoftDateTime
-
+/*! @brief  Gets the current Date and Time in a certain format
+    @return yyyy-MM-dd HH:mm:ss as string
+ */
 +(NSString *) getCurrentDateTime
 {
     NSDateFormatter *dateFormatter=[[NSDateFormatter alloc] init];
