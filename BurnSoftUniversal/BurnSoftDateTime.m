@@ -20,4 +20,40 @@
     return [dateFormatter stringFromDate:[NSDate date]];
 }
 
+#pragma mark Format Date
+    /*! @brief Format date to mm/dd/yyyy
+     */
++(NSString *)formatDate:(NSDate *)date
+    {
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateStyle:NSDateFormatterShortStyle];
+        [dateFormatter setDateFormat:@"MM'/'dd'/'yyyy"];
+        NSString *formattedDate = [dateFormatter stringFromDate:date];
+        return formattedDate;
+    }
+#pragma mark Format Date and Time Long By Provided DateTime
+    /*! @brief Pass a Date and Time Stampe and have it returned in a connected format
+     */
++(NSString *)formatLongConnectedByDateAndTIme:(NSDate *)mydate
+    {
+        NSString *sAns = [NSString new];
+        NSDateFormatter *dateFormatter=[NSDateFormatter new];
+        [dateFormatter setDateFormat:@"yyyy-MM-dd_HH_mm_ss"];
+        //[dateFormatter stringFromDate:[NSDate date]
+        sAns = [NSString stringWithFormat:@"%@",[dateFormatter stringFromDate:mydate]];
+        return sAns;
+    }
+#pragma mark Format Date and Time Long By Current DateTime
+    /*! @brief  Get the Current Date and Time Stampe and have it returned in a connected format
+     */
++(NSString *)formatLongConnectedDateTimeStamp
+    {
+        NSString *sAns = [NSString new];
+        NSDateFormatter *dateFormatter=[NSDateFormatter new];
+        [dateFormatter setDateFormat:@"yyyy-MM-dd_HH_mm_ss"];
+        
+        sAns = [NSString stringWithFormat:@"%@",[dateFormatter stringFromDate:[NSDate date]]];
+        
+        return sAns;
+    }
 @end

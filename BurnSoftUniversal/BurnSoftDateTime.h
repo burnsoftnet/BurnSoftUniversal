@@ -13,6 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 @interface BurnSoftDateTime : NSObject
 
 +(NSString *) getCurrentDateTime;
++(NSString *)formatDate:(NSDate *)date;
++(NSString *)formatLongConnectedByDateAndTIme:(NSDate *)mydate;
++(NSString *)formatLongConnectedDateTimeStamp;
 
 @end
 
