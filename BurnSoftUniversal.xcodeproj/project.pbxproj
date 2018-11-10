@@ -6,6 +6,19 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		A56A690F2197193600B1302F /* BurnSoftUniversalLib */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = A56A69102197193600B1302F /* Build configuration list for PBXAggregateTarget "BurnSoftUniversalLib" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = BurnSoftUniversalLib;
+			productName = BurnSoftUniversalLib;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		A5A3263C1F3FE08A0021EC6D /* BurnSoftFileSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A3263B1F3FE08A0021EC6D /* BurnSoftFileSystem.m */; };
 		A5A3263F1F3FE14D0021EC6D /* BurnSoftFormFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A3263E1F3FE14D0021EC6D /* BurnSoftFormFunctions.m */; };
@@ -200,6 +213,11 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = burnsoft;
 				TargetAttributes = {
+					A56A690F2197193600B1302F = {
+						CreatedOnToolsVersion = 10.1;
+						DevelopmentTeam = MF94VYSKL4;
+						ProvisioningStyle = Automatic;
+					};
 					A5C1A16E1E422D9900B5ABF6 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = MF94VYSKL4;
@@ -226,6 +244,7 @@
 			targets = (
 				A5C1A16E1E422D9900B5ABF6 /* BurnSoftUniversal */,
 				A5D273FF218BC40600BF0F53 /* Tests */,
+				A56A690F2197193600B1302F /* BurnSoftUniversalLib */,
 			);
 		};
 /* End PBXProject section */
@@ -275,6 +294,24 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		A56A69112197193600B1302F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MF94VYSKL4;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A56A69122197193600B1302F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MF94VYSKL4;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		A5C1A1761E422D9900B5ABF6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -487,6 +524,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A56A69102197193600B1302F /* Build configuration list for PBXAggregateTarget "BurnSoftUniversalLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A56A69112197193600B1302F /* Debug */,
+				A56A69122197193600B1302F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A5C1A16A1E422D9900B5ABF6 /* Build configuration list for PBXProject "BurnSoftUniversal" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
