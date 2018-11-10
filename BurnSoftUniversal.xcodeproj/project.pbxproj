@@ -11,6 +11,8 @@
 			isa = PBXAggregateTarget;
 			buildConfigurationList = A56A69102197193600B1302F /* Build configuration list for PBXAggregateTarget "BurnSoftUniversalLib" */;
 			buildPhases = (
+				A56A69132197208F00B1302F /* CopyFiles */,
+				A598401F219723CF009EBBE5 /* ShellScript */,
 			);
 			dependencies = (
 			);
@@ -20,6 +22,13 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		A56A6914219720C000B1302F /* DBManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5C1A1881E422F4A00B5ABF6 /* DBManager.h */; };
+		A56A6915219720C000B1302F /* BurnSoftMath.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5C1A17E1E422DCF00B5ABF6 /* BurnSoftMath.h */; };
+		A56A6916219720C000B1302F /* BurnSoftGeneral.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5C1A17B1E422DC300B5ABF6 /* BurnSoftGeneral.h */; };
+		A56A6917219720C000B1302F /* BurnSoftUniversal.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5C1A1721E422D9900B5ABF6 /* BurnSoftUniversal.h */; };
+		A56A6918219720C000B1302F /* BurnSoftFileSystem.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5A3263A1F3FE08A0021EC6D /* BurnSoftFileSystem.h */; };
+		A56A6919219720C000B1302F /* BurnSoftFormFunctions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5A3263D1F3FE14D0021EC6D /* BurnSoftFormFunctions.h */; };
+		A56A691A219720C000B1302F /* BurnSoftDateTime.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5D2740F218BD1F300BF0F53 /* BurnSoftDateTime.h */; };
 		A5A3263C1F3FE08A0021EC6D /* BurnSoftFileSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A3263B1F3FE08A0021EC6D /* BurnSoftFileSystem.m */; };
 		A5A3263F1F3FE14D0021EC6D /* BurnSoftFormFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A3263E1F3FE14D0021EC6D /* BurnSoftFormFunctions.m */; };
 		A5A326401F3FE1C10021EC6D /* BurnSoftFileSystem.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5A3263A1F3FE08A0021EC6D /* BurnSoftFileSystem.h */; };
@@ -50,6 +59,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		A56A69132197208F00B1302F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				A56A6914219720C000B1302F /* DBManager.h in CopyFiles */,
+				A56A6915219720C000B1302F /* BurnSoftMath.h in CopyFiles */,
+				A56A6916219720C000B1302F /* BurnSoftGeneral.h in CopyFiles */,
+				A56A6917219720C000B1302F /* BurnSoftUniversal.h in CopyFiles */,
+				A56A6918219720C000B1302F /* BurnSoftFileSystem.h in CopyFiles */,
+				A56A6919219720C000B1302F /* BurnSoftFormFunctions.h in CopyFiles */,
+				A56A691A219720C000B1302F /* BurnSoftDateTime.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A5C1A16D1E422D9900B5ABF6 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -258,6 +283,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A598401F219723CF009EBBE5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\n\nUNIVERSAL_OUTPUTFOLDER=${BUILD_DIR}/${CONFIGURATION}-universal\n\n# make sure the output directory exists\nmkdir -p \"${UNIVERSAL_OUTPUTFOLDER}\"\n\n# Step 1. Build Device and Simulator versions\nxcodebuild -target \"${PROJECT_NAME}\" ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphoneos  BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" clean build\nxcodebuild -target \"${PROJECT_NAME}\" -configuration ${CONFIGURATION} -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" clean build\n\n# Step 2. Copy the framework structure (from iphoneos build) to the universal folder\ncp -R \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${PROJECT_NAME}.framework\" \"${UNIVERSAL_OUTPUTFOLDER}/\"\n\n# Step 3. Copy Swift modules from iphonesimulator build (if it exists) to the copied framework directory\nSIMULATOR_SWIFT_MODULES_DIR=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${PROJECT_NAME}.framework/Modules/${PROJECT_NAME}.swiftmodule/.\"\nif [ -d \"${SIMULATOR_SWIFT_MODULES_DIR}\" ]; then\ncp -R \"${SIMULATOR_SWIFT_MODULES_DIR}\" \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework/Modules/${PROJECT_NAME}.swiftmodule\"\nfi\n\n# Step 4. Create universal binary file using lipo and place the combined executable in the copied framework directory\nlipo -create -output \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework/${PROJECT_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${PROJECT_NAME}.framework/${PROJECT_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${PROJECT_NAME}.framework/${PROJECT_NAME}\"\n\n# Step 5. Convenience step to copy the framework to the project's directory\ncp -R \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework\" \"${PROJECT_DIR}\"\n\n# Step 6. Convenience step to open the project's directory in Finder\nopen \"${PROJECT_DIR}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A5C1A16B1E422D9900B5ABF6 /* Sources */ = {
