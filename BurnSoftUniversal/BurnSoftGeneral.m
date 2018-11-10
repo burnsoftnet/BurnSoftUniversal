@@ -126,7 +126,7 @@
             
     return sAns;
 }
-#pragma mark Convert Strin to NSNumber
+#pragma mark Convert String to NSNumber
 /*! @brief Convert a string to NSNumber
 */
 +(NSNumber *) convertToNSNumberByString:(NSString *) sValue
@@ -136,4 +136,20 @@
     NSNumber *nNumber = [f numberFromString:sValue];
     return nNumber;
 }
+
+#pragma mark Convert Boolean to String
+/*! @brief  Convert the boolen to a string yes or No
+ @return yes or no as string
+ */
++(NSString *) convertBOOLtoString:(BOOL) bValue
+{
+    NSString *sAns = [NSString new];
+    if (bValue) {
+        sAns = @"Yes";
+    } else {
+        sAns = @"No";
+    }
+    return sAns;
+}
+
 @end

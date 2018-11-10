@@ -39,4 +39,8 @@
 
 #pragma mark Convert String to NSNumber
 +(NSNumber *) convertToNSNumberByString:(NSString *) sValue;
+
+#pragma mark Convert Boolean to String
++(NSString *) convertBOOLtoString:(BOOL) bValue;
+
 @end
