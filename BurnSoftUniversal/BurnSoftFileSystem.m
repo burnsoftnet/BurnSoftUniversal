@@ -10,7 +10,8 @@
 
 @implementation BurnSoftFileSystem
 #pragma mark CopyFile
-// Simplify the copy and replace method with overwriteoption
+/*! @brief Simplify the copy and replace method with overwriteoption
+ */
 +(BOOL) copyFileFromFilePath:(NSString *) fromPath ToNewPath:(NSString *) toPath ErrorMessage:(NSString **) msg
 {
     
@@ -54,7 +55,8 @@
     return bAns;
 }
 #pragma mark Delete File byPath
-// Pass the path and file to delete that file
+/*! @brief  Pass the path and file to delete that file
+ */
 +(BOOL)DeleteFileByPath:(NSString *) sPath ErrorMessage:(NSString **) msg
 {
     NSFileManager *fileManager = [NSFileManager defaultManager];
@@ -71,7 +73,8 @@
     return success;
 }
 #pragma mark Load Files in Path by Extension
-//Load all the files in the target path that have a certain type of extension
+/*! @brief Load all the files in the target path that have a certain type of extension
+*/
 +(NSArray *) getCertainFilefromPath:(NSString *) sPath ByExtension:(NSString *) myExt
 {
     NSArray *filePathsArray = [NSArray new];
@@ -82,7 +85,8 @@
     return filePathsArray;
 }
 #pragma mark Load Files in Local Directory by Extension
-// Load all the files in the Local documents directory by a certain extension.
+/*! @brief  Load all the files in the Local documents directory by a certain extension.
+*/
 +(NSArray *) getCertainFilesFromDocumentsByExtension:(NSString *) myExt
 {
     NSArray *filePathsArray = [NSArray new];
@@ -95,7 +99,8 @@
     return filePathsArray;
 }
 #pragma mark Return Full Path of App Documents with file name
-//Return Full Path of App Documents with file name attached
+/*! @brief Return Full Path of App Documents with file name attached
+ */
 +(NSString *) returnFullPathwithFileName:(NSString *) myFile
 {
     NSArray *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -103,7 +108,8 @@
     return [docPath stringByAppendingPathComponent:myFile];
 }
 #pragma mark CopyFile 2
-// Simplify the copy and replace method with overwriteoption
+/*! @brief  Simplify the copy and replace method with overwriteoption
+*/
 +(BOOL) copyFileFrom:(NSString *) sFrom To:(NSString *) sTo ErrorMessage:(NSString **) errorMessage
 {
     NSFileManager *fileManager = [NSFileManager defaultManager];
@@ -142,7 +148,8 @@
     return bAns;
 }
 #pragma mark Create a Directory
-//Create a directory if it doesn't already exist
+/*! @brief Create a directory if it doesn't already exist
+ */
 +(BOOL)createDirectoryIfNotExists:(NSString *) sPath ErrorMessage:(NSString **) errMsg
 {
     BOOL bAns = NO;
@@ -161,7 +168,8 @@
     return bAns;
 }
 #pragma mark Convert Bool to String
-//Convert a boolean value to string Yes or No
+/*! @brief Convert a boolean value to string Yes or No
+ */
 +(NSString *) convertBOOLtoString:(BOOL) bValue
 {
     NSString *sAns = [NSString new];
@@ -174,7 +182,8 @@
 }
 
 #pragma mark Get File Exteension From File Path
-// Get the extension of the file from the full path
+/*! @brief Get the extension of the file from the full path
+ */
 +(NSString *) getFileExtensionbyPath:(NSString *) filePath
 {
     NSArray *pathArray = [filePath componentsSeparatedByString:@"."];
