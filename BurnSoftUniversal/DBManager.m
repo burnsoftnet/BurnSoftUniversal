@@ -21,7 +21,8 @@
 
 @implementation DBManager
 #pragma mark Init Database with File name
-//Initialize the database with the file name
+/*! @brief Initialize the database with the file name
+ */
 -(instancetype)initWithDatabaseFileName:(NSString *)dbFilename {
     self = [super init];
     if (self ) {
@@ -42,8 +43,9 @@
 }
 
 #pragma mark  PRIVATE - Copy DB to Docs Directory
-//Copy the database from the application path to the users documents path
-//Since when the application is updated, the database is replaced and to prevent that we copy the database to the user docs path to retain the data.
+/*! @brief Copy the database from the application path to the users documents path
+ Since when the application is updated, the database is replaced and to prevent that we copy the database to the user docs path to retain the data.
+ */
 -(void)copyDatabaseIntoDocumentsDirectory {
     //Check if the database file exists in the docuents directory.
     NSString *destinationPath = [self.documentsDirectory stringByAppendingPathComponent:self.databaseFilename];
@@ -51,7 +53,7 @@
         NSString *sourcePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:self.databaseFilename];
         NSError *error;
         [[NSFileManager defaultManager] copyItemAtPath:sourcePath toPath:destinationPath error:&error];
-    
+        
         //Check if any error occured during copying and displaying it
         if (error != nil) {
             NSLog(@"%@", [error localizedDescription]);
@@ -60,7 +62,8 @@
 }
 
 #pragma mark PRIVATE - Run SQL statement
-//pass a sqlstatement to be executed, select with resulte set into the Array.
+/*! @brief pass a sqlstatement to be executed, select with resulte set into the Array.
+ */
 -(void)runQuery:(const char *)query isQueryExecutable:(BOOL)queryExecutable{
     // Create a sqlite object.
     sqlite3 *sqlite3Database;
@@ -162,15 +165,16 @@
         sqlite3_finalize(compiledStatement);
     }
     else {
-            // In the database cannot be opened then show the error message on the debugger.
-            NSLog(@"%s", sqlite3_errmsg(sqlite3Database));
+        // In the database cannot be opened then show the error message on the debugger.
+        NSLog(@"%s", sqlite3_errmsg(sqlite3Database));
     }
     
     // Close the database.
     sqlite3_close(sqlite3Database);
 }
 #pragma mark Load Data from DB into Array
-// Pass a STL statement to have the data loaded into an Array
+/*! @brief  Pass a STL statement to have the data loaded into an Array
+ */
 -(NSArray *)loadDataFromDB:(NSString *)query {
     //run the query and indicate that is not executable
     //the query string is converted to a char * object
@@ -181,14 +185,16 @@
 }
 
 #pragma mark Execute SQL statement
-//pass a sqlstatement to be executed, usually INSERT,UPDATE, DELETE, etc.
+/*! @brief pass a sqlstatement to be executed, usually INSERT,UPDATE, DELETE, etc.
+ */
 -(void)executeQuery:(NSString *)query {
     [self runQuery:[query UTF8String] isQueryExecutable:YES];
 }
 
 #pragma mark Error Handling
-//NOTE: Translate Errors from SQLITE integer to English
-//USEDBY: GENERAL
+/*! @brief  Translate Errors from SQLITE integer to English
+ @remark USEDBY: GENERAL
+ */
 -(NSString *) dbErrors:(int)ret
 {
     NSString *msg;
@@ -291,8 +297,8 @@
 }
 
 #pragma mark Get Database Path
-//NOTE: Pass the Database Name to find the Path of the database
-//USEDBY:
+/*! @brief  Pass the Database Name to find the Path of the database
+ */
 -(NSString *) getDatabasePath :(NSString *) DBNAME
 {
     NSArray *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -300,8 +306,8 @@
     return [docPath stringByAppendingPathComponent:DBNAME];
 }
 #pragma mark Copy DB if Needed
-//NOTE: Pass the name of the database to see if we need to copy the database from the application directory to the documents directory
-//USEDBY:
+/*! @brief  Pass the name of the database to see if we need to copy the database from the application directory to the documents directory
+ */
 -(void) copyDbIfNeeded :(NSString *) DBNAME MessageHandler:(NSString **) msg
 {
     NSString *myDBinAppPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:DBNAME];
@@ -320,8 +326,8 @@
 }
 
 #pragma mark Check Database
-//NOTE: Pass the Database name to see if the database is in the path that we need it to be in
-//USEDBY:
+/*! @brief  Pass the Database name to see if the database is in the path that we need it to be in
+ */
 -(void)checkDB :(NSString *) DBNAME MessageHandler:(NSString **) msg
 {
     NSString *dbPathString = [self getDatabasePath:DBNAME];
@@ -334,8 +340,8 @@
 }
 
 #pragma mark Restory Factory Database
-//NOTE: Retore the Factory Database by deleting the database in the user docs and copying it back over.
-//USEDBBY:
+/*! @brief  Retore the Factory Database by deleting the database in the user docs and copying it back over.
+ */
 -(void) restoreFactoryDB :(NSString *) DBNAME MessageHandler:(NSString **) msg
 {
     NSString *myDBinDocsPath = [self getDatabasePath:DBNAME];
