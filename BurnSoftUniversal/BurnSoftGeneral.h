@@ -29,13 +29,13 @@
 +(BOOL) isNumeric :(NSString *) sValue;
 
 #pragma mark Format Date
-+(NSString *)formatDate:(NSDate *)date;
++(NSString *)formatDate:(NSDate *)date __deprecated_msg("BurnSoftDateTime.formatDate instead");
 
 #pragma mark Format Date and Time Long By Provided DateTime
-+(NSString *)formatLongConnectedByDateAndTIme:(NSDate *)mydate;
++(NSString *)formatLongConnectedByDateAndTIme:(NSDate *)mydate __deprecated_msg("BurnSoftDateTime.formatLongConnectedByDateAndTIme instead");
 
 #pragma mark Format Date and Time Long By Current DateTime
-+(NSString *)formatLongConnectedDateTimeStamp;
++(NSString *)formatLongConnectedDateTimeStamp __deprecated_msg("BurnSoftDateTime.formatLongConnectedDateTimeStamp instead");
 
 #pragma mark Convert String to NSNumber
 +(NSNumber *) convertToNSNumberByString:(NSString *) sValue;
