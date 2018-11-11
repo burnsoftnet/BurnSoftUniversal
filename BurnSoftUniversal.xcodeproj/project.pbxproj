@@ -41,22 +41,9 @@
 		A5C1A1871E422F1400B5ABF6 /* BurnSoftGeneral.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5C1A17B1E422DC300B5ABF6 /* BurnSoftGeneral.h */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		A5C1A18A1E422F4A00B5ABF6 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C1A1891E422F4A00B5ABF6 /* DBManager.m */; };
 		A5C1A18B1E422F5300B5ABF6 /* DBManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5C1A1881E422F4A00B5ABF6 /* DBManager.h */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		A5D27403218BC40600BF0F53 /* Tests_BurnSoftMath.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D27402218BC40600BF0F53 /* Tests_BurnSoftMath.m */; };
-		A5D27405218BC40600BF0F53 /* libBurnSoftUniversal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5C1A16F1E422D9900B5ABF6 /* libBurnSoftUniversal.a */; };
 		A5D27411218BD1F300BF0F53 /* BurnSoftDateTime.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D27410218BD1F300BF0F53 /* BurnSoftDateTime.m */; };
-		A5D27412218BD1F300BF0F53 /* BurnSoftDateTime.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D27410218BD1F300BF0F53 /* BurnSoftDateTime.m */; };
 		A5D27413218BD38E00BF0F53 /* BurnSoftDateTime.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5D2740F218BD1F300BF0F53 /* BurnSoftDateTime.h */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		A5D27406218BC40600BF0F53 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A5C1A1671E422D9900B5ABF6 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A5C1A16E1E422D9900B5ABF6;
-			remoteInfo = BurnSoftUniversal;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		A56A69132197208F00B1302F /* CopyFiles */ = {
@@ -108,9 +95,6 @@
 		A5C1A1881E422F4A00B5ABF6 /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
 		A5C1A1891E422F4A00B5ABF6 /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
 		A5C1A18D1E422F8100B5ABF6 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		A5D27400218BC40600BF0F53 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A5D27402218BC40600BF0F53 /* Tests_BurnSoftMath.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests_BurnSoftMath.m; sourceTree = "<group>"; };
-		A5D27404218BC40600BF0F53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5D2740F218BD1F300BF0F53 /* BurnSoftDateTime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BurnSoftDateTime.h; sourceTree = "<group>"; };
 		A5D27410218BD1F300BF0F53 /* BurnSoftDateTime.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BurnSoftDateTime.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -123,14 +107,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A5D273FD218BC40600BF0F53 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A5D27405218BC40600BF0F53 /* libBurnSoftUniversal.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -138,7 +114,6 @@
 			isa = PBXGroup;
 			children = (
 				A5C1A1711E422D9900B5ABF6 /* BurnSoftUniversal */,
-				A5D27401218BC40600BF0F53 /* Tests */,
 				A5C1A1701E422D9900B5ABF6 /* Products */,
 				A5C1A18C1E422F8100B5ABF6 /* Frameworks */,
 			);
@@ -148,7 +123,6 @@
 			isa = PBXGroup;
 			children = (
 				A5C1A16F1E422D9900B5ABF6 /* libBurnSoftUniversal.a */,
-				A5D27400218BC40600BF0F53 /* Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -182,15 +156,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A5D27401218BC40600BF0F53 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				A5D27402218BC40600BF0F53 /* Tests_BurnSoftMath.m */,
-				A5D27404218BC40600BF0F53 /* Info.plist */,
-			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -211,24 +176,6 @@
 			productReference = A5C1A16F1E422D9900B5ABF6 /* libBurnSoftUniversal.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		A5D273FF218BC40600BF0F53 /* Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A5D2740A218BC40600BF0F53 /* Build configuration list for PBXNativeTarget "Tests" */;
-			buildPhases = (
-				A5D273FC218BC40600BF0F53 /* Sources */,
-				A5D273FD218BC40600BF0F53 /* Frameworks */,
-				A5D273FE218BC40600BF0F53 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A5D27407218BC40600BF0F53 /* PBXTargetDependency */,
-			);
-			name = Tests;
-			productName = Tests;
-			productReference = A5D27400218BC40600BF0F53 /* Tests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -248,11 +195,6 @@
 						DevelopmentTeam = MF94VYSKL4;
 						ProvisioningStyle = Automatic;
 					};
-					A5D273FF218BC40600BF0F53 = {
-						CreatedOnToolsVersion = 10.1;
-						DevelopmentTeam = MF94VYSKL4;
-						ProvisioningStyle = Automatic;
-					};
 				};
 			};
 			buildConfigurationList = A5C1A16A1E422D9900B5ABF6 /* Build configuration list for PBXProject "BurnSoftUniversal" */;
@@ -268,21 +210,10 @@
 			projectRoot = "";
 			targets = (
 				A5C1A16E1E422D9900B5ABF6 /* BurnSoftUniversal */,
-				A5D273FF218BC40600BF0F53 /* Tests */,
 				A56A690F2197193600B1302F /* BurnSoftUniversalLib */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		A5D273FE218BC40600BF0F53 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		A598401F219723CF009EBBE5 /* ShellScript */ = {
@@ -300,7 +231,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#!/bin/sh\n\nUNIVERSAL_OUTPUTFOLDER=${BUILD_DIR}/${CONFIGURATION}-universal\n\n# make sure the output directory exists\nmkdir -p \"${UNIVERSAL_OUTPUTFOLDER}\"\n\n# Step 1. Build Device and Simulator versions\nxcodebuild -target \"${PROJECT_NAME}\" ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphoneos  BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" clean build\nxcodebuild -target \"${PROJECT_NAME}\" -configuration ${CONFIGURATION} -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" clean build\n\n# Step 2. Copy the framework structure (from iphoneos build) to the universal folder\ncp -R \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${PROJECT_NAME}.framework\" \"${UNIVERSAL_OUTPUTFOLDER}/\"\n\n# Step 3. Copy Swift modules from iphonesimulator build (if it exists) to the copied framework directory\nSIMULATOR_SWIFT_MODULES_DIR=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${PROJECT_NAME}.framework/Modules/${PROJECT_NAME}.swiftmodule/.\"\nif [ -d \"${SIMULATOR_SWIFT_MODULES_DIR}\" ]; then\ncp -R \"${SIMULATOR_SWIFT_MODULES_DIR}\" \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework/Modules/${PROJECT_NAME}.swiftmodule\"\nfi\n\n# Step 4. Create universal binary file using lipo and place the combined executable in the copied framework directory\nlipo -create -output \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework/${PROJECT_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${PROJECT_NAME}.framework/${PROJECT_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${PROJECT_NAME}.framework/${PROJECT_NAME}\"\n\n# Step 5. Convenience step to copy the framework to the project's directory\ncp -R \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework\" \"${PROJECT_DIR}\"\n\n# Step 6. Convenience step to open the project's directory in Finder\nopen \"${PROJECT_DIR}\"\n";
+			shellScript = "#!/bin/sh\n\nUNIVERSAL_OUTPUTFOLDER=${BUILD_DIR}/${CONFIGURATION}-universal\nOUPUT_PATH_NAME=\"iphonesimulator\"\n\n# make sure the output directory exists\nmkdir -p \"${UNIVERSAL_OUTPUTFOLDER}\"\n\n# Step 1. Build Device and Simulator versions\nxcodebuild -target \"${PROJECT_NAME}\" ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphoneos  BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" clean build\nxcodebuild -target \"${PROJECT_NAME}\" -configuration ${CONFIGURATION} -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" clean build\n\n# Step 2. Copy the framework structure (from iphoneos build) to the universal folder\ncp -R \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${PROJECT_NAME}.framework\" \"${UNIVERSAL_OUTPUTFOLDER}/\"\n\n# Step 3. Copy Swift modules from iphonesimulator build (if it exists) to the copied framework directory\nSIMULATOR_SWIFT_MODULES_DIR=\"${BUILD_DIR}/${CONFIGURATION}-${OUPUT_PATH_NAME}/${PROJECT_NAME}.framework/Modules/${PROJECT_NAME}.swiftmodule/.\"\nif [ -d \"${SIMULATOR_SWIFT_MODULES_DIR}\" ]; then\ncp -R \"${SIMULATOR_SWIFT_MODULES_DIR}\" \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework/Modules/${PROJECT_NAME}.swiftmodule\"\nfi\n\n# Step 4. Create universal binary file using lipo and place the combined executable in the copied framework directory\nlipo -create -output \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework/${PROJECT_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-${OUPUT_PATH_NAME}/${PROJECT_NAME}.framework/${PROJECT_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${PROJECT_NAME}.framework/${PROJECT_NAME}\"\n\n# Step 5. Convenience step to copy the framework to the project's directory\ncp -R \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework\" \"${PROJECT_DIR}\"\n\nrm -rf \"${UNIVERSAL_OUTPUTFOLDER}\"\n# Step 6. Convenience step to open the project's directory in Finder\n#open \"${PROJECT_DIR}\"\nopen \"${BUILD_DIR}\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -319,24 +250,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A5D273FC218BC40600BF0F53 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A5D27403218BC40600BF0F53 /* Tests_BurnSoftMath.m in Sources */,
-				A5D27412218BD1F300BF0F53 /* BurnSoftDateTime.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		A5D27407218BC40600BF0F53 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A5C1A16E1E422D9900B5ABF6 /* BurnSoftUniversal */;
-			targetProxy = A5D27406218BC40600BF0F53 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		A56A69112197193600B1302F /* Debug */ = {
@@ -502,6 +416,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				VALID_ARCHS = "arm64 arm64e armv7 armv7s i386 x86_64";
 			};
 			name = Debug;
 		};
@@ -524,47 +439,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		A5D27408218BC40600BF0F53 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MF94VYSKL4;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = Tests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = net.burnsoft.Tests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		A5D27409218BC40600BF0F53 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MF94VYSKL4;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = Tests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = net.burnsoft.Tests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 arm64e armv7 armv7s i386 x86_64";
 			};
 			name = Release;
 		};
@@ -594,15 +469,6 @@
 			buildConfigurations = (
 				A5C1A1791E422D9900B5ABF6 /* Debug */,
 				A5C1A17A1E422D9900B5ABF6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A5D2740A218BC40600BF0F53 /* Build configuration list for PBXNativeTarget "Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A5D27408218BC40600BF0F53 /* Debug */,
-				A5D27409218BC40600BF0F53 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
