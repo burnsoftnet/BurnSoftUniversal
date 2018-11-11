@@ -93,7 +93,7 @@
 #pragma mark Format Date
 /*! @brief Format date to mm/dd/yyyy
 */
-+(NSString *)formatDate:(NSDate *)date
++(NSString *)formatDate:(NSDate *)date __deprecated_msg("BurnSoftDateTime.formatDate instead")
 {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateStyle:NSDateFormatterShortStyle];
@@ -104,7 +104,7 @@
 #pragma mark Format Date and Time Long By Provided DateTime
 /*! @brief Pass a Date and Time Stampe and have it returned in a connected format
 */
-+(NSString *)formatLongConnectedByDateAndTIme:(NSDate *)mydate
++(NSString *)formatLongConnectedByDateAndTIme:(NSDate *)mydate __deprecated_msg("BurnSoftDateTime.formatLongConnectedByDateAndTIme instead")
 {
     NSString *sAns = [NSString new];
     NSDateFormatter *dateFormatter=[NSDateFormatter new];
@@ -116,7 +116,7 @@
 #pragma mark Format Date and Time Long By Current DateTime
 /*! @brief  Get the Current Date and Time Stampe and have it returned in a connected format
 */
-+(NSString *)formatLongConnectedDateTimeStamp
++(NSString *)formatLongConnectedDateTimeStamp __deprecated_msg("BurnSoftDateTime.formatLongConnectedDateTimeStamp instead")
 {
     NSString *sAns = [NSString new];
     NSDateFormatter *dateFormatter=[NSDateFormatter new];
